@@ -15,6 +15,7 @@ class CreatePurchasesTable extends Migration
     {
         Schema::create('purchases', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('customer_name');
             $table->integer('offering_id')
                   ->unsigned();
             $table->integer('quantity')

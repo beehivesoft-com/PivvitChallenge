@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOffringsTable extends Migration
+class CreateOfferingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateOffringsTable extends Migration
      */
     public function up()
     {
-        Schema::create('offrings', function (Blueprint $table) {
+        Schema::create('offerings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->decimal('price');
@@ -28,6 +28,6 @@ class CreateOffringsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('offrings');
+        Schema::dropIfExists('offerings');
     }
 }
