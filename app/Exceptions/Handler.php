@@ -60,7 +60,7 @@ class Handler extends ExceptionHandler
             $response['status'] = Response::HTTP_NOT_FOUND;
             $response['message'] = Response::$statusTexts[Response::HTTP_NOT_FOUND];
         }
-        dd($response);
+
         return response()->json(['error' => $response], $response['status']);
     }
 
